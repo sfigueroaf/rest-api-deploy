@@ -28,16 +28,16 @@ export class MovieController {
     res.status(201).json(newMovie);
   }
 
-  static async delete (req, res) {
-    const { id } = req.params
+  static async delete(req, res) {
+    const { id } = req.params;
 
-    const result = await MovieModel.delete({ id })
+    const result = await MovieModel.delete({ id });
 
     if (result === false) {
-      return res.status(404).json({ message: 'Movie not found' })
+      return res.status(404).json({ message: "Movie not found" });
     }
 
-    return res.json({ message: 'Movie deleted' })
+    return res.json({ message: "Movie deleted" });
   }
 
   static async update(req, res) {
