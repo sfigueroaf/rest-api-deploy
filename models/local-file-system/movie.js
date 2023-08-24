@@ -1,6 +1,9 @@
 import { randomUUID } from "node:crypto";
-import { readJSON } from "../../utils.js";
-const movies = readJSON("../movies.json");
+// import { readJSON } from "../../utils.js";
+import fs from "node:fs";
+const movies = JSON.parse(fs.readFileSync("../movies.json", "utf-8"));
+
+// const movies = readJSON("../movies.json");
 // console.log("aaaa", movies);
 
 export class MovieModel {
