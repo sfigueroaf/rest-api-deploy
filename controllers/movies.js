@@ -5,6 +5,7 @@ export class MovieController {
   static async getAll(req, res) {
     const { genre } = req.query;
     const movies = await MovieModel.getAll({ genre });
+    console.log(222, res.json)
     //qué es lo que renderiza
     res.json(movies);
   }
