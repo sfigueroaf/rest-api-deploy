@@ -15,6 +15,7 @@ moviesRouter.patch("/:id", MovieController.update);
 //Rutas de métodos para led
 ledRouter.get("/encender", LedController.encenderLED);
 ledRouter.get("/apagar", LedController.apagarLED);
+ledRouter.get("/status", LedController.readLED);
 
 // Ruta para controlar acciones con datos x e y
 ledRouter.post('/control', LedController.controlarLED);
